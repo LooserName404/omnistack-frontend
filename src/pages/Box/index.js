@@ -6,7 +6,7 @@ import './styles.css';
 import { distanceInWords } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import Dropzone from 'react-dropzone';
-import Socket from 'socket.io-client';
+import socket from 'socket.io-client';
 
 export default class Box extends Component {
     state = {box: {}} 
