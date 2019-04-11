@@ -22,7 +22,7 @@ export default class Box extends Component {
         const box = this.props.match.params.id;
         const io = socket('https://omnistackbackendthyago.herokuapp.com');
 
-        io.emit('connectRoom');
+        io.emit('connectRoom', box);
 
         io.on('file', data => {
             this.setState({box: { ...this.state.box, files: [data, ...this.state.box.files]}});
